@@ -29,7 +29,7 @@ axios.interceptors.request.use(
 axios.interceptors.response.use(
   function (response) {
     // Any status code that lie within the range of 2xx cause this function to trigger
-    if (response.headers["content-type"]?.includes("application/json")) {
+    if ((response.headers["content-type"] as string)?.includes("application/json")) {
       response = response.data;
       if (response.status) {
         return response;

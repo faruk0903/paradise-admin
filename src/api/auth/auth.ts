@@ -3,7 +3,7 @@ import { request } from "../request";
 
 export const LoginApi = async (body: any) => {
   const response: AxiosResponse<ApiResponseType> = await request({
-    url: "/login",
+    url: "/auth/login",
     method: "POST",
     body: { ...body },
   });
@@ -13,16 +13,16 @@ export const LoginApi = async (body: any) => {
 
 export const LogOutAPI = async (body: any) => {
     const response: AxiosResponse<any> = await request({
-        url: `/logout`,
+        url: `/auth/logout`,
         method: "POST",
         body: { ...body },
     });
     return response;
 };
 export const EditProfileAPi = async (body: any) => {
-    
+
     const response: AxiosResponse<any> = await request({
-        url: `/editProfile`,
+        url: `/auth/editProfile`,
         method: "POST",
         body: { ...body },
     });
@@ -31,7 +31,7 @@ export const EditProfileAPi = async (body: any) => {
 };
 export const ChangePasswordApi = async (body: any) => {
     const response: AxiosResponse<any> = await request({
-        url: `/changePassword`,
+        url: `/auth/changePassword`,
         method: "POST",
         body: { ...body },
     });
@@ -39,7 +39,7 @@ export const ChangePasswordApi = async (body: any) => {
 };
 export const ForgotPasswordApi = async (body: any) => {
     const response: AxiosResponse<any> = await request({
-        url: `/forgetPassword`,
+        url: `/auth/forgetPassword`,
         method: "POST",
         body: { ...body },
     });
@@ -47,7 +47,7 @@ export const ForgotPasswordApi = async (body: any) => {
 };
 export const ResetPasswordApi = async (body: any) => {
     const response: AxiosResponse<any> = await request({
-        url: `/resetPassword`,
+        url: `/auth/resetPassword`,
         method: "POST",
         body: { ...body },
     });
